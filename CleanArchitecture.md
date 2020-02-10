@@ -27,7 +27,7 @@ The code that implements high-level policy should not depend on the code that im
 - Do not override concrete functions, use abstract functions.
 - DIP violations cannot be entirely removed, but they can be gathered into a small number of concrete components and kept separate from the rest of the system.
 
-### Component cohesion
+## Component cohesion
 
 #### REP (Reuse/Release equivalence principle)
 Reuse and release should not be done unless there is a release managment and versioning in place.
@@ -41,9 +41,15 @@ Reuse and release should not be done unless there is a release managment and ver
 should be together. The CRP says that classes that are not tightly bound to each other should not be in
 the same component.
 
-### Component coupling
+## Component coupling
 #### Ascyclic dependecies principle
 - Allow no cycles in dependency graph
+
+#### Stable dependencies principle
+- The modules that are intended to be easy to change are not depeneded on by modules that are harder to change.
+
+#### Stable abstraction principle
+- A component should be as abstract as it is stable.
 
 
 
